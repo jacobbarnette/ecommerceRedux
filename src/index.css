@@ -1,0 +1,26 @@
+.home {
+  margin: 0 auto;
+  padding-top:4em;
+  text-align: center;
+  font-size: 4em;
+  width: 100%;
+}
+
+.tagLine{
+  margin:0 auto;
+  text-align: center;
+}
+
+.navBar {
+  margin-bottom: 2em;
+}
+
+.tagLine{
+  margin:0 auto;
+  text-align: center;
+}
+
+.btnContainer {
+  margin: 0 auto;
+  text-align: center;
+}
