@@ -2,11 +2,20 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { BsCart3 } from "react-icons/bs";
+import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { Router, Link, Switch } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { cartSlice, selectAllCart } from "../features/cart/cartSlice";
+
 const Header = () => {
-  const navigate = useNavigate();
+  const cart = useSelector(selectAllCart);
+
+  const itemsInCart = () => {
+    if (cart === undefined) {
+      return "0";
+    } else {
+      return cart.length;
+    }
+  };
   return (
     <>
       <Navbar
@@ -38,6 +47,7 @@ const Header = () => {
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <BsCart3></BsCart3>
+                  {itemsInCart()}
                 </Nav.Link>
               </LinkContainer>
             </Nav.Item>
