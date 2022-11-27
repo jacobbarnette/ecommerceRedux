@@ -2,7 +2,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { BsCart3 } from "react-icons/bs";
+import { LinkContainer } from "react-router-bootstrap";
+import { Router, Link, Switch } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar
@@ -21,15 +25,21 @@ const Header = () => {
           <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
           <Nav className="justify-content-end" activeKey="/home">
             <Nav.Item>
-              <Nav.Link href="/">Home</Nav.Link>
+              <LinkContainer to="/">
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="/Products">Products</Nav.Link>
+              <LinkContainer to="/items">
+                <Nav.Link>Products</Nav.Link>
+              </LinkContainer>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="link-2">
-                <BsCart3></BsCart3>
-              </Nav.Link>
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <BsCart3></BsCart3>
+                </Nav.Link>
+              </LinkContainer>
             </Nav.Item>
           </Nav>
         </Container>

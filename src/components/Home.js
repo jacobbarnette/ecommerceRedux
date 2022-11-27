@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="home">
@@ -9,7 +11,7 @@ const Home = () => {
       </div>
       <div className=" btnContainer justify-content-center">
         <Button
-          //onClick={() => navigate("/products")}
+          onClick={() => navigate("/items")}
           className="shopBtn text-center justify-content-center"
           variant="dark"
         >
