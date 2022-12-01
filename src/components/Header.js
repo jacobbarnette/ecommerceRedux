@@ -8,12 +8,17 @@ import { cartSlice, selectAllCart } from "../features/cart/cartSlice";
 
 const Header = () => {
   const cart = useSelector(selectAllCart);
-
+  let totalCartItems = 0;
   const itemsInCart = () => {
     if (cart === undefined) {
       return "0";
     } else {
-      return cart.length;
+      let i = 0;
+      cart.map((item, i) => {
+        totalCartItems += cart[i].quanity;
+        return totalCartItems;
+      });
+      return totalCartItems;
     }
   };
   return (

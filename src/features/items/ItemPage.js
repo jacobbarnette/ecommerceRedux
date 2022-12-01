@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Container, Row, Col } from "react-bootstrap";
 
 import Header from "../../components/Header";
+import ItemCard from "./ItemCard";
 import { selectAllItems, fetchItems } from "./itemsSlice";
 import React from "react";
 import { addItemToCart } from "../cart/cartSlice";
@@ -19,30 +20,20 @@ const ItemPage = () => {
     }
   }, [itemStatus, dispatch]);
 
-  const itemList = items.items.map((item) => {
-    return (
-      <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={item.image} />
-          <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-            <Card.Text>{item.description.substring(0, 100)}</Card.Text>
-            <Button
-              onClick={() => dispatch(addItemToCart(item))}
-              variant="primary"
-            >
-              Add to Cart
-            </Button>
-          </Card.Body>
-        </Card>
-      </div>
-    );
+  const itemList = items.items.map((item, i) => {
+    console.log(item);
+    return <ItemCard id={i} item={item}></ItemCard>;
   });
+
   return (
-    <div>
+    <Container>
       <Header />
-      <div className="productCard">{itemList}</div>;
-    </div>
+      <div className="itemCard">
+        <Container fluid>
+          <Row>{itemList}</Row>
+        </Container>
+      </div>
+    </Container>
   );
 };
 

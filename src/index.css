@@ -12,7 +12,7 @@
 }
 
 .navBar {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .tagLine{
@@ -27,6 +27,61 @@
 
 .shoppingHeader{
   margin:0 auto;
-  padding-top:4em;
+  padding-top:3em;
   text-align: center;
 }
+
+.cardImg {
+  padding-top: 5em;
+  height: 19em;
+  width: 19em;
+}
+
+.card {
+  margin-top: 5em;
+  border: none;
+}
+
+img {
+  margin: 0 auto;
+  height: 17em;
+  width: 20em;
+}
+
+
+.individualCartItem {
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.cartContainer {
+  margin: 0 auto;
+  width: 50%
+}
+
+
+.cartImg{
+  width: 10em;
+  height: 10em;
+}
+
+
+.container {
+  padding: 2rem 0rem;
+}
+
+.price {
+  margin-left: 1rem;
+}
+
+  td, th {
+    vertical-align: middle;
+    text-align: center;
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+  }
+
+  .modal-footer {
+    padding-top: 0rem;
+  }
