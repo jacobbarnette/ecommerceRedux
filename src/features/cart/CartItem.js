@@ -6,7 +6,13 @@ import {
 } from "./cartSlice";
 import { Col, Button, Table } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { BsFileMinusFill, BsFilePlusFill, BsTrash2 } from "react-icons/bs";
+import {
+  BsFileMinusFill,
+  BsFilePlusFill,
+  BsTrash2,
+  BsPlus,
+  BsDash,
+} from "react-icons/bs";
 import { removeItemFromCart } from "./cartSlice";
 
 const CartItem = () => {
@@ -17,33 +23,39 @@ const CartItem = () => {
       <>
         <tr>
           <td>
-            <img src={item.image}></img>
+            <img className="cartImg" src={item.image}></img>
           </td>
           <td>{item.title}</td>
           <td>$ {item.price}</td>
-          <td>{item.quanity}</td>
           <td>
             <Button
+              variant="light"
+              className="decreaseBtn cartBtn"
               onClick={() => {
                 dispatch(decreaseQuanityOfItem(item));
               }}
             >
-              {" "}
-              <BsFileMinusFill />
+              {"           "}
+              <BsDash />
             </Button>
-
-            {item.price * item.quanity}
+            {item.quanity}
             <Button
+              variant="light"
+              className=" cartBtn increaseBtn"
               onClick={() => {
                 dispatch(increaseQuanityOfItem(item));
               }}
             >
               {" "}
-              <BsFilePlusFill />
+              <BsPlus />
             </Button>
           </td>
+          <td>{item.price * item.quanity}</td>
           <td>
-            <Button onClick={() => dispatch(removeItemFromCart(item))}>
+            <Button
+              variant="danger"
+              onClick={() => dispatch(removeItemFromCart(item))}
+            >
               <BsTrash2 />
             </Button>
           </td>

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const initialState = {
   cart: [],
@@ -32,7 +31,11 @@ export const cartSlice = createSlice({
     decreaseQuanityOfItem: (state, action) => {
       const { id } = action.payload;
       const selectedItem = state.cart.find((item) => item.id === id);
-      selectedItem.quanity--;
+      if (selectedItem.quanity <= 1) {
+        state.cart = state.cart.filter((item) => item.id !== id);
+      } else if (selectedItem.quanity > 1) {
+        selectedItem.quanity--;
+      }
     },
   },
 });

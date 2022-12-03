@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 
 import Header from "../../components/Header";
 import ItemCard from "./ItemCard";
 import { selectAllItems, fetchItems } from "./itemsSlice";
 import React from "react";
-import { addItemToCart } from "../cart/cartSlice";
 
 const ItemPage = () => {
   const dispatch = useDispatch();
@@ -25,16 +24,20 @@ const ItemPage = () => {
     return <ItemCard id={i} item={item}></ItemCard>;
   });
 
-  return (
-    <Container>
-      <Header />
-      <div className="itemCard">
-        <Container fluid>
-          <Row>{itemList}</Row>
-        </Container>
-      </div>
-    </Container>
-  );
+  if (itemStatus === "idle") {
+    return <Spinner animation="border"></Spinner>;
+  } else {
+    return (
+      <Container>
+        <Header />
+        <div className="itemCard">
+          <Container fluid>
+            <Row>{itemList}</Row>
+          </Container>
+        </div>
+      </Container>
+    );
+  }
 };
 
 export default ItemPage;

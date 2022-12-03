@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { BsCart3 } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { cartSlice, selectAllCart } from "../features/cart/cartSlice";
+import { selectAllCart } from "../features/cart/cartSlice";
 
 const Header = () => {
   const cart = useSelector(selectAllCart);
@@ -28,7 +28,6 @@ const Header = () => {
         fixed="top"
         collapseOnSelect
         expand="lg"
-        bg="dark"
         variant="dark"
       >
         <Container>

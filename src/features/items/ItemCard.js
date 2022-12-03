@@ -1,40 +1,39 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
-
-import { selectAllItems, fetchItems } from "./itemsSlice";
+import { Button, Card, Container, Col } from "react-bootstrap";
 import React from "react";
 import { addItemToCart } from "../cart/cartSlice";
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
-  const items = useSelector(selectAllItems);
-  //const itemStatus = useSelector((state) => state.items.status);
 
   return (
-    <Col>
-      <div classname="card">
-        <Card
-          style={{
-            width: "20rem",
-            height: "30rem",
-          }}
-        >
-          <Card.Img variant="top" className="cardImg" src={item.image} />
-          <Card.Body>
-            <Card.Title>{item.title.substring(0, 20)}</Card.Title>
-            <Card.Text>{item.description.substring(0, 100)}</Card.Text>
+    <Col className="column">
+      <Container>
+        <div classname="card">
+          <Card className="cardClass">
+            <div className="cardImgContainer" style={{ textAlign: "center" }}>
+              <Card.Img className="card-image" variant="top" src={item.image} />
+            </div>
 
-            <Button
-              onClick={() => dispatch(addItemToCart(item))}
-              variant="primary"
-            >
-              Add to Cart
-            </Button>
-          </Card.Body>
-        </Card>
-      </div>
+            <Card.Body className="cardBody">
+              <div className="card-text-body">
+                <Card.Title className="card-description">
+                  {item.title}
+                </Card.Title>
+
+                <Card.Text className="itemPrice">$ {item.price}</Card.Text>
+                <Button
+                  className="addToCart"
+                  onClick={() => dispatch(addItemToCart(item))}
+                >
+                  Add to Cart
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </div>
+      </Container>
     </Col>
   );
 };

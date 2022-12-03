@@ -1,11 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
+
 import { selectAllCart } from "./cartSlice";
-import { useSelector, useDispatch } from "react-redux";
-import { BsTrash2 } from "react-icons/bs";
-import { removeItemFromCart } from "./cartSlice";
+import { useSelector } from "react-redux";
+
 import Header from "../../components/Header";
-import { Button, Card, Container, Row, Col, Table } from "react-bootstrap";
+import { Container, Table } from "react-bootstrap";
 import CartItem from "./CartItem";
 
 const Cart = () => {
@@ -21,18 +20,18 @@ const Cart = () => {
       price += item.price;
       return price;
     });
-    return price;
+    return price.toFixed(2);
   };
 
-  const dispatch = useDispatch();
-  console.log(cart);
   if (cart === undefined || cart.length === 0) {
     return (
       <div>
         <Header />
         <div>
           <h1 className="shoppingHeader">My Shopping Cart</h1>
-          <h3 className="shoppingHeader">You have no items in your cart</h3>
+          <h3 className="itemInCartString text-center">
+            You have no items in your cart
+          </h3>
         </div>
       </div>
     );
@@ -41,8 +40,8 @@ const Cart = () => {
       <div className="cartContainer container">
         <Header />
         <h1 className="shoppingHeader">My Shopping Cart</h1>
-        <Container>
-          <Table striped bordered hover>
+        <Container fluid>
+          <Table striped hover>
             <thead>
               <tr>
                 <th>Product</th>

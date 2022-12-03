@@ -1,7 +1,6 @@
 import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-
 const initialState = {
   items: [],
   status: "idle",
@@ -10,7 +9,7 @@ const initialState = {
 
 //fetch items from fakeStoreAPI
 export const fetchItems = createAsyncThunk("items/fetchItems", async () => {
-  const response = await axios.get("https://fakestoreapi.com/products?limit=8");
+  const response = await axios.get("https://fakestoreapi.com/products?limit=9");
 
   return response.data;
 });
