@@ -1,6 +1,15 @@
+html {
+  width: 100%;
+}
 .background {
-  background: url('./Assets/background-wave.png') bottom no-repeat;
-  height: 100vh
+  background: url('./Assets/background-wave.png')   bottom no-repeat ;
+  height: 100vh;
+ 
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .home {
   margin: 0 auto;
@@ -11,7 +20,7 @@
 }
 
 .tagLine {
-  text-align: left;
+  text-align: center;
   font-weight: bold;
 }
 
@@ -22,7 +31,8 @@
   background-color: black;
   font-size: 1.5em;
   height: 6em;
-  margin-bottom: 2em
+  margin-bottom: 2em;
+  display: flex;
 }
 
 .btnContainer {
@@ -76,6 +86,7 @@
   height: 12em;
   object-fit: cover;
   text-align: center;
+ 
 }
 
 .itemCard{
@@ -177,7 +188,7 @@
 .card-description {
   font-size: 1.5em;
   font-weight: bold;
-  height: 100px;
+  height: 5em;
   overflow: hidden;
 }
 
@@ -191,4 +202,70 @@
 
 .emptyTableHeader {
   width: 50%;
+}
+
+@media (max-width: 1600px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navBar {
+    height: 20%;
+  }
+  .header {
+    font-size: 5em;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    padding-left: 1em;
+  }
+
+  h4{
+  margin-top: 10em;
+ }
+
+ .column.col:first-of-type {
+  padding-top: 15em;
+ }
+
+  .background {
+    background-size: auto;
+    position: absolute;
+    bottom: -10em;
+    width: 100%
+  }
+
+  .col {
+    flex: none;
+  }
+
+  .itemCard {
+    margin: 0 9em;
+  }
+
+
+  .homeImg {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    opacity: 25%;
+    
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .tagline{
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    font-weight: bold;
+    width: 100%;
+  }
 }

@@ -24,38 +24,39 @@ const Header = () => {
   return (
     <>
       <Navbar
-        className="navBar"
+        className="navBar mx-auto"
         fixed="top"
         collapseOnSelect
         expand="lg"
         variant="dark"
       >
-        <Container>
+        <Container className="headerContainer">
           <Navbar.Brand href="/">
-            <h1 className="header">FakeStore</h1>
+            <h1 className="header mx-auto">FakeStore</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav"></Navbar.Collapse>
-          <Nav className="justify-content-end" activeKey="/home">
-            <Nav.Item>
-              <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-            <Nav.Item>
-              <LinkContainer to="/items">
-                <Nav.Link>Products</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-            <Nav.Item>
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <BsCart3></BsCart3>
-                  {itemsInCart()}
-                </Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-          </Nav>
+          <Navbar.Collapse id="response-navbar-nav">
+            <Nav className="justify-content-end" activeKey="/home">
+              <Nav.Item>
+                <LinkContainer to="/">
+                  <Nav.Link>Home</Nav.Link>
+                </LinkContainer>
+              </Nav.Item>
+              <Nav.Item>
+                <LinkContainer to="/items">
+                  <Nav.Link>Products</Nav.Link>
+                </LinkContainer>
+              </Nav.Item>
+              <Nav.Item>
+                <LinkContainer to="/cart">
+                  <Nav.Link>
+                    <BsCart3></BsCart3>
+                    {itemsInCart()}
+                  </Nav.Link>
+                </LinkContainer>
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
