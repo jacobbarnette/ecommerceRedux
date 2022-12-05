@@ -13,6 +13,7 @@ const Home = () => {
           <div className=" btnContainer justify-content-center">
             <Button
               onClick={() => navigate("/items")}
+              onTouchStart={() => navigate("/items")}
               className="shopBtn text-center justify-content-center"
               variant="dark"
             >

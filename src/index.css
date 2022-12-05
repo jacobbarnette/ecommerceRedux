@@ -91,6 +91,7 @@ html {
 
 .itemCard{
   padding-top: 7em;
+  
 }
 
 .cardImg {
@@ -204,13 +205,13 @@ html {
   width: 50%;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1024px) {
   html {
     font-size: 55%;
   }
 
   .navBar {
-    height: 20%;
+    height: 22%;
   }
   .header {
     font-size: 5em;
@@ -219,6 +220,12 @@ html {
     width: 100%;
     padding-left: 1em;
   }
+  .shoppingHeader{
+    margin:0 auto;
+    padding-top:12em;
+    text-align: center;
+  }
+
 
   h4{
   margin-top: 10em;
@@ -232,7 +239,8 @@ html {
     background-size: auto;
     position: absolute;
     bottom: -10em;
-    width: 100%
+    width: 100%;
+    background-image: none;
   }
 
   .col {
@@ -241,6 +249,10 @@ html {
 
   .itemCard {
     margin: 0 9em;
+  }
+
+  .btnContainer {
+    z-index: 7;
   }
 
 
@@ -252,7 +264,7 @@ html {
     height: 50%;
     left: 0;
     opacity: 25%;
-    
+    z-index: -1;
   }
 
   .container {
