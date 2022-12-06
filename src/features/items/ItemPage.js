@@ -32,7 +32,7 @@ const ItemPage = () => {
         <Header />
         <div className="itemCard">
           <Container fluid>
-            <Row>{itemList}</Row>
+            <Row className="d-flex justify-content-center">{itemList}</Row>
           </Container>
         </div>
       </Container>

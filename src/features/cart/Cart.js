@@ -2,7 +2,7 @@ import React from "react";
 
 import { selectAllCart } from "./cartSlice";
 import { useSelector } from "react-redux";
-
+import { ToastContainer } from "react-toastify";
 import Header from "../../components/Header";
 import { Container, Table } from "react-bootstrap";
 import CartItem from "./CartItem";
@@ -26,6 +26,7 @@ const Cart = () => {
   if (cart === undefined || cart.length === 0) {
     return (
       <div>
+        <ToastContainer autoClose={2000} />
         <Header />
         <div>
           <h1 className="shoppingHeader">My Shopping Cart</h1>

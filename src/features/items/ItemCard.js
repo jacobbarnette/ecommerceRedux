@@ -3,16 +3,25 @@ import { useDispatch } from "react-redux";
 import { Button, Card, Container, Col } from "react-bootstrap";
 import React from "react";
 import { addItemToCart } from "../cart/cartSlice";
+import { toast, ToastContainer } from "react-toastify";
 
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
 
+  const notify = () => {
+    dispatch(addItemToCart(item));
+    toast.success("working");
+  };
+
   return (
-    <Col className="column">
-      <Container>
-        <div classname="card">
+    <Col className="column justify-content-center">
+      <Container className="itemCardContainer">
+        <div classname="card justify-content-center">
           <Card className="cardClass">
-            <div className="cardImgContainer" style={{ textAlign: "center" }}>
+            <div
+              className="cardImgContainer justify-content-center"
+              style={{ textAlign: "center" }}
+            >
               <Card.Img className="card-image" variant="top" src={item.image} />
             </div>
 
@@ -34,6 +43,10 @@ const ItemCard = ({ item }) => {
           </Card>
         </div>
       </Container>
+      <ToastContainer
+        autoClose={2000}
+        className={"Toastify__toast-container--top-center toastContainer"}
+      />
     </Col>
   );
 };

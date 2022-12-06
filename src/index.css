@@ -208,10 +208,18 @@ html {
 @media (max-width: 1024px) {
   html {
     font-size: 55%;
+    width: 100vw;
+  }
+
+  .toastContainer {
+    position:  fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
   }
 
   .navBar {
-    height: 22%;
+    height: 15em;
   }
   .header {
     font-size: 5em;
@@ -240,19 +248,42 @@ html {
     position: absolute;
     bottom: -10em;
     width: 100%;
-    background-image: none;
   }
 
   .col {
     flex: none;
   }
 
-  .itemCard {
-    margin: 0 9em;
-  }
+
 
   .btnContainer {
     z-index: 7;
+  }
+
+  .itemCard {
+    display: block;
+    width: 100%;
+   position: absolute;
+   left: 30%;
+   right: 0%;
+  
+  }
+
+  .row {
+    width: 100%;
+    margin: 0 auto;
+  
+  }
+
+  .itemCardContainer { 
+    width: 100%;
+    margin: 0 auto; 
+    display: flex;
+
+  }
+
+  .container-fluid {
+    width: 100%;
   }
 
 

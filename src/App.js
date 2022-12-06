@@ -1,9 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
+import { ToastContainer } from "react-bootstrap";
 
 const App = () => {
   return (
