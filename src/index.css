@@ -3,9 +3,6 @@ html {
 }
 .background {
   background: url('./Assets/background-wave.png')   bottom no-repeat ;
-  height: 100vh;
- 
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,13 +21,13 @@ html {
   font-weight: bold;
 }
 
-.one {
-  
+.cardBtn {
+  display:   flex;
 }
 .navBar {
   background-color: black;
-  font-size: 1.5em;
-  height: 6em;
+  font-size: 1.2em;
+  height: 2;
   margin-bottom: 2em;
   display: flex;
 }
@@ -55,9 +52,19 @@ html {
 }
 .header {
   color: #00ffd1;
-  font-weight: 900;
-  font-size: 3.5em;
+  font-weight: 1000;
+  letter-spacing: 0.25rem;
+  font-size: 3rem;
+  padding-left: 2em;
+}
 
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+  font-size: 1.5rem;
+  color: white;
 }
 .shoppingHeader{
   margin:0 auto;
@@ -174,6 +181,14 @@ html {
   
 }
 
+.navItems {
+  color: white;
+}
+
+.navItems:hover {
+  color: #00ffd1;
+}
+
 .cardBody {
   width: 100%;
   border-top: 1px solid rgb(229, 229, 229)
@@ -198,6 +213,9 @@ html {
   font-weight: bold;
 }
 
+.cartContainer {
+  width: 100%;
+}
 
 
 
@@ -218,16 +236,7 @@ html {
     z-index: 100;
   }
 
-  .navBar {
-    height: 15em;
-  }
-  .header {
-    font-size: 5em;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    padding-left: 1em;
-  }
+ 
   .shoppingHeader{
     margin:0 auto;
     padding-top:12em;

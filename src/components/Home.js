@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import homepageImg from "../Assets/homepage-image.png";
+import blueLine from "../Assets/blueUnderline.png";
+
 const Home = () => {
   const navigate = useNavigate();
   return (
@@ -9,7 +11,7 @@ const Home = () => {
         <div className="col">
           <h4 className="tagLine text-muted">Voted Best Retail Site of 2022</h4>
           <p className="tagLine">We don't follow trends, we set them.</p>
-
+          <image src={blueLine}></image>
           <div className=" btnContainer justify-content-center">
             <Button
               onClick={() => navigate("/items")}

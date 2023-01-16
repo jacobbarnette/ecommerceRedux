@@ -24,39 +24,49 @@ const Header = () => {
   return (
     <>
       <Navbar
-        className="navBar mx-auto"
+        className="py-0 navBar"
         fixed="top"
         collapseOnSelect
         expand="lg"
         variant="dark"
       >
-        <Container className="headerContainer">
-          <Navbar.Brand href="/">
-            <h1 className="header mx-auto">FakeStore</h1>
+        <Container>
+          <Navbar.Brand href="#home">
+            <h1 className="header">FakeStore</h1>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="response-navbar-nav">
-            <Nav className="justify-content-end" activeKey="/home">
-              <Nav.Item>
-                <LinkContainer to="/">
-                  <Nav.Link>Home</Nav.Link>
-                </LinkContainer>
-              </Nav.Item>
-              <Nav.Item>
-                <LinkContainer to="/items">
-                  <Nav.Link>Products</Nav.Link>
-                </LinkContainer>
-              </Nav.Item>
-              <Nav.Item>
-                <LinkContainer to="/cart">
-                  <Nav.Link>
-                    <BsCart3></BsCart3>
-                    {itemsInCart()}
-                  </Nav.Link>
-                </LinkContainer>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav className="ml-auto">
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="response-navbar-nav">
+              <Nav
+                className="mr-auto navContainer justify-content-end"
+                activeKey="/home"
+              >
+                <Nav.Item>
+                  <LinkContainer to="/">
+                    <Nav.Link className="navItems">Home</Nav.Link>
+                  </LinkContainer>
+                </Nav.Item>
+                <Nav.Item>
+                  <LinkContainer to="/items">
+                    <Nav.Link className="navItems">Products</Nav.Link>
+                  </LinkContainer>
+                </Nav.Item>
+                <Nav.Item>
+                  <LinkContainer to="/contact">
+                    <Nav.Link className="navItems">Contact</Nav.Link>
+                  </LinkContainer>
+                </Nav.Item>
+                <Nav.Item>
+                  <LinkContainer to="/cart">
+                    <Nav.Link className="navItems">
+                      <BsCart3></BsCart3>
+                      {itemsInCart()}
+                    </Nav.Link>
+                  </LinkContainer>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Nav>
         </Container>
       </Navbar>
     </>
