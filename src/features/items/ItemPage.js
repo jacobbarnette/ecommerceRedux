@@ -20,7 +20,6 @@ const ItemPage = () => {
   }, [itemStatus, dispatch]);
 
   const itemList = items.items.map((item, i) => {
-    console.log(item);
     return <ItemCard id={i} item={item}></ItemCard>;
   });
 

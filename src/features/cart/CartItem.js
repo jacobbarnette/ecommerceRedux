@@ -4,15 +4,9 @@ import {
   increaseQuanityOfItem,
   selectAllCart,
 } from "./cartSlice";
-import { Col, Button, Table } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  BsFileMinusFill,
-  BsFilePlusFill,
-  BsTrash2,
-  BsPlus,
-  BsDash,
-} from "react-icons/bs";
+import { BsTrash2, BsPlus, BsDash } from "react-icons/bs";
 import { removeItemFromCart } from "./cartSlice";
 
 const CartItem = () => {

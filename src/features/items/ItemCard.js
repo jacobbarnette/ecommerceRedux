@@ -8,11 +8,6 @@ import { toast, ToastContainer } from "react-toastify";
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
 
-  const notify = () => {
-    dispatch(addItemToCart(item));
-    toast.success("working");
-  };
-
   return (
     <Col className="column justify-content-center">
       <Container className="itemCardContainer">
