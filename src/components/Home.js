@@ -9,9 +9,11 @@ const Home = () => {
     <div className="homeContainer container">
       <div className="home one row">
         <div className="col">
-          <h4 className="tagLine text-muted">Voted Best Retail Site of 2022</h4>
+          <h4 className="tagLine tagLineTop text-center text-muted">
+            Voted Best Retail Site of 2022
+          </h4>
           <p className="tagLine">We don't follow trends, we set them.</p>
-          <image src={blueLine}></image>
+
           <div className=" btnContainer justify-content-center">
             <Button
               onClick={() => navigate("/items")}
