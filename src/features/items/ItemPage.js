@@ -23,8 +23,18 @@ const ItemPage = () => {
     return <ItemCard id={i} item={item}></ItemCard>;
   });
 
-  if (itemStatus === "idle") {
-    return <Spinner animation="border"></Spinner>;
+  if (itemStatus === "idle" || itemStatus === "loading") {
+    return (
+      <div className="spinnerDiv">
+        <Header />
+        <Spinner
+          style={{ width: "4rem", height: "4rem" }}
+          className="spinner"
+          size="xxl"
+          animation="border"
+        ></Spinner>
+      </div>
+    );
   } else {
     return (
       <Container>

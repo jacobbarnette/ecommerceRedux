@@ -17,6 +17,13 @@ html {
   width: 100%;
 }
 
+
+.spinnerDiv {
+  display: flex;
+   align-Items: center;
+   justify-content: center;
+   height: 100vh ;
+}
 .tagLine {
   text-align: center;
   font-weight: bold;
@@ -234,6 +241,48 @@ html {
 .emptyTableHeader {
   width: 50%;
 }
+
+
+.contact {
+
+  display: flex;
+  flex-direction: column;
+  padding-top:3em;
+  text-align: center;
+  font-size: 4em; 
+  align-items: center;  
+ 
+  background: url('./Assets/background-wave.png') no-repeat bottom fixed ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.socialIconContainer {
+  display: flex;
+  gap: 10rem;
+  font-size: 5rem;
+  color: black;
+  padding-bottom: 1rem;
+}
+
+.socialIcon:hover {
+  display: inline-block;
+  color:black;
+  cursor: pointer;
+  -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+  transform: scale(1.1);
+}
+
+.socialIcon {
+  color: black;
+ 
+}
+
+
 
 @media (max-width: 1024px) {
   html {
