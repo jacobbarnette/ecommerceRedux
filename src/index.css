@@ -58,7 +58,10 @@ html {
 }
 
 .homeImg {
-  object-fit: 100%;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
   max-width: 100%;
 }
 .header {
@@ -100,7 +103,6 @@ html {
  
 }
 
-
 /*cart styles */
 .cartContainer {
   margin: 0 auto;
@@ -137,8 +139,6 @@ html {
   margin-top: 2em;
 }
 
-
-
 .addToCart {
   background-color: black;
   border: none;
@@ -152,7 +152,7 @@ html {
 }
 
 .cardClass {
-  width: 25em;
+  max-width: 25em;
 }
 
 .cardImgContainer {
@@ -211,9 +211,7 @@ html {
   width: 50%;
 }
 
-
 .contact {
-
   display: flex;
   flex-direction: column;
   padding-top:3em;
@@ -249,14 +247,10 @@ html {
  
 }
 
-
-
 @media (max-width: 1024px) {
   html {
-    
     width: 100vw;
   }
-
   .spinnerDiv {
     display: flex;
      align-Items: center;
@@ -272,7 +266,6 @@ html {
     font-size: 1.5rem;
     color: white;
   }
-
   .toastContainer {
     position:  fixed;
     top: 0;
@@ -309,8 +302,5 @@ html {
   .homeImg {
     display: none;
   }
-
- 
-
 
 }
