@@ -39,8 +39,8 @@ const ItemPage = () => {
     return (
       <Container>
         <Header />
-        <div className="itemCard">
-          <Container fluid>
+        <div className="py-5 itemCard">
+          <Container className="py-5" fluid>
             <Row className="d-flex justify-content-center">{itemList}</Row>
           </Container>
         </div>

@@ -17,7 +17,7 @@ const Contact = () => {
           <Container>
             <Row>
               <div className="socialIconContainer">
-                <Col className="socialIcons -auto">
+                <Col className="socialIcons">
                   <a
                     target="_blank"
                     rel="noreferrer"

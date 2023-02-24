@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BsCart3 } from "react-icons/bs";
+import { BsFillCartFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { selectAllCart } from "../features/cart/cartSlice";
@@ -31,8 +31,8 @@ const Header = () => {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="#home">
-            <h1 className="header">FakeStore</h1>
+          <Navbar.Brand href="/">
+            <h1 className=" px-5 header">FakeStore</h1>
           </Navbar.Brand>
           <Nav className="ml-auto">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -58,8 +58,8 @@ const Header = () => {
                 </Nav.Item>
                 <Nav.Item>
                   <LinkContainer to="/cart">
-                    <Nav.Link className="navItems">
-                      <BsCart3></BsCart3>
+                    <Nav.Link className="navItems cartIcon">
+                      <BsFillCartFill></BsFillCartFill>
                       {itemsInCart()}
                     </Nav.Link>
                   </LinkContainer>
