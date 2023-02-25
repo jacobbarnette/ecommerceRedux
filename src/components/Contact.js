@@ -12,6 +12,7 @@ const Contact = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
+        className="col-sm-12"
       >
         <div className="contact home">
           <Container>

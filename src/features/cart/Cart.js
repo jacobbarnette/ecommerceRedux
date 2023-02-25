@@ -29,7 +29,7 @@ const Cart = () => {
         <ToastContainer autoClose={2000} />
         <Header />
         <div>
-          <h1 className="shoppingHeader">My Shopping Cart</h1>
+          <h1 className="shoppingHeader text-center">My Shopping Cart</h1>
           <h3 className="itemInCartString text-center">
             You have no items in your cart
           </h3>
@@ -38,9 +38,9 @@ const Cart = () => {
     );
   } else {
     return (
-      <div className="cartContainer container">
+      <div className=" ">
         <Header />
-        <h1 className="shoppingHeader">My Shopping Cart</h1>
+        <h1 className="text-center shoppingHeader">My Shopping Cart</h1>
         <Container fluid>
           <Table striped hover>
             <thead>

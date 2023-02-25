@@ -20,21 +20,10 @@ const CartItem = () => {
             <img className="cartImg" src={item.image}></img>
           </td>
           <td>{item.title}</td>
-          <td>$ {item.price}</td>
+          <td>${item.price}</td>
           <td>
             <Button
-              variant="light"
-              className="decreaseBtn cartBtn"
-              onClick={() => {
-                dispatch(decreaseQuanityOfItem(item));
-              }}
-            >
-              {"           "}
-              <BsDash />
-            </Button>
-            {item.quanity}
-            <Button
-              variant="light"
+              variant=""
               className=" cartBtn increaseBtn"
               onClick={() => {
                 dispatch(increaseQuanityOfItem(item));
@@ -42,6 +31,16 @@ const CartItem = () => {
             >
               {" "}
               <BsPlus />
+            </Button>
+            {item.quanity}
+            <Button
+              variant=""
+              className=""
+              onClick={() => {
+                dispatch(decreaseQuanityOfItem(item));
+              }}
+            >
+              <BsDash />
             </Button>
           </td>
           <td>{item.price * item.quanity}</td>

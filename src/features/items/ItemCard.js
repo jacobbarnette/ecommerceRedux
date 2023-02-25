@@ -14,9 +14,9 @@ const ItemCard = ({ item }) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="col-sm-12 col-md-6 col-lg-4"
+      className="col-lg-4 col-md-6 col-sm-12"
     >
-      <Col className="justify-content-center">
+      <Col>
         <Container className="itemCardContainer">
           <div className="justify-content-center">
             <Card className="mt-5 cardClass">
@@ -28,11 +28,12 @@ const ItemCard = ({ item }) => {
                 />
               </div>
               <Card.Body className="cardBody">
+                <hr></hr>
                 <div className="card-text-body">
                   <Card.Title className="card-description">
                     {item.title}
                   </Card.Title>
-                  <Card.Text className="itemPrice">
+                  <Card.Text className="py-2 itemPrice">
                     $ {item.price.toFixed(2)}
                   </Card.Text>
                   <Button
@@ -46,11 +47,11 @@ const ItemCard = ({ item }) => {
             </Card>
           </div>
         </Container>
-        <ToastContainer
-          autoClose={2000}
-          className={"Toastify__toast-container--top-center toastContainer"}
-        />
-      </Col>
+      </Col>{" "}
+      <ToastContainer
+        autoClose={2000}
+        className={"Toastify__toast-container--top-center toastContainer"}
+      />
     </motion.div>
   );
 };

@@ -12,26 +12,23 @@ const Home = () => {
       viewport={{ once: true }}
       transition={{ duration: 1 }}
     >
-      <div className="homeContainer container">
+      <div className="container">
         <div className="home row">
-          <div className="col-lg-6 col-md-12 col-sm-6">
+          <div className="col-lg-6  col-md-12 ">
             <h4 className="tagLine tagLineTop text-center text-muted">
               Voted Best Retail Site of 2022
             </h4>
             <p className="tagLine">We don't follow trends, we set them.</p>
-
-            <div className=" btnContainer ">
-              <Button
-                onClick={() => navigate("/items")}
-                onTouchStart={() => navigate("/items")}
-                className="shopBtn text-center "
-                variant="dark"
-              >
-                Shop Now
-              </Button>
-            </div>
+            <Button
+              onClick={() => navigate("/items")}
+              onTouchStart={() => navigate("/items")}
+              className="shopBtn"
+              variant="dark"
+            >
+              Shop Now
+            </Button>
           </div>
-          <div className="image-container col-lg-6 col-md-6 col-sm-6">
+          <div className="col-lg-6 col-md-6 col-sm-6">
             <img className="homeImg" src={homepageImg} alt="people"></img>
           </div>
         </div>

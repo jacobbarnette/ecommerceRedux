@@ -32,13 +32,13 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href="/">
-            <h1 className=" px-5 header">FakeStore</h1>
+            <h1 className="header">FakeStore</h1>
           </Navbar.Brand>
-          <Nav className="ml-auto">
+          <Nav className="">
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="response-navbar-nav">
               <Nav
-                className="mr-auto navContainer justify-content-end"
+                className="navContainer justify-content-end"
                 activeKey="/home"
               >
                 <Nav.Item>
