@@ -107,9 +107,10 @@
 }
 
 .cartImg{
-  margin: 0 auto;
-  width: 10em;
-  height: 10em;
+max-width: 7em;
+min-width: 7em;
+max-height: 7em;
+min-height: none;
 }
 
 .container {
@@ -235,8 +236,97 @@
 
 .socialIcon {
   color: black;
- 
 }
+
+.cartHeader{
+  font-weight: bold;
+}
+
+div.fade .cartModal .modal .show{
+  background-color: black;
+}
+.backdropClass.modal-backdrop.show {
+
+}
+.backdropClass{
+}
+.cartRow {
+  gap: 1.5em;
+  width: 80%;
+}
+.cartTable{
+  max-height: 2em;
+}
+
+.individualCartItem {
+  border: none;
+  font-weight: bold;
+  
+}
+
+.cartItems {
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+.cartBtn {
+  color: black;
+  font-weight: bold;
+  border: none;
+  font-size: 1.8em;
+}
+.itemTitle{
+  font-weight: bold;
+}
+.addBtn {
+  background-color: #85FFE9;
+}
+
+.itemBtn {
+  border: none;
+  
+}
+
+.individualCartItem{
+  display: flex;
+}
+
+
+.total {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.closeBtn {
+  background-color: #F47D7B;
+}
+
+
+.total {
+  font-weight: bold;
+}
+.dialogClass {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+.cartModal .modal-content{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 39vw;
+  justify-content: center;
+  overflow-y: auto;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+
 
 @media (max-width: 1024px) {
   .spinnerDiv {
@@ -277,6 +367,17 @@
 .navContainer {
   gap: 0
 }
+.cartModal .modal-content{
+  
+  width: 100vw;
+  
+  overflow: scroll;
+}
+
+.cartBtn {
+  font-size: 1em;
+}
+
 
 
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -5,13 +6,14 @@ import { BsFillCartFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { selectAllCart } from "../features/cart/cartSlice";
+import CartModal from "./CartModal";
 
 const Header = () => {
   const cart = useSelector(selectAllCart);
   let totalCartItems = 0;
   const itemsInCart = () => {
     if (cart === undefined) {
-      return "0";
+      return 0;
     } else {
       let i = 0;
       cart.map((item, i) => {
@@ -21,6 +23,10 @@ const Header = () => {
       return totalCartItems;
     }
   };
+
+  const [showModal, setShowModal] = useState(false);
+  const handleModal = () => setShowModal(!showModal);
+
   return (
     <>
       <Navbar
@@ -57,18 +63,24 @@ const Header = () => {
                   </LinkContainer>
                 </Nav.Item>
                 <Nav.Item>
-                  <LinkContainer to="/cart">
-                    <Nav.Link className="navItems cartIcon">
-                      <BsFillCartFill></BsFillCartFill>
-                      {itemsInCart()}
-                    </Nav.Link>
-                  </LinkContainer>
+                  <Nav.Link
+                    onClick={setShowModal}
+                    className="navItems cartIcon"
+                  >
+                    {itemsInCart()}
+                    <BsFillCartFill></BsFillCartFill>
+                  </Nav.Link>
                 </Nav.Item>
               </Nav>
             </Navbar.Collapse>
           </Nav>
         </Container>
       </Navbar>
+      <CartModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        handleModal={handleModal}
+      />
     </>
   );
 };
