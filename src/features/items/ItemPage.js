@@ -31,9 +31,10 @@ const ItemPage = () => {
   let currentItems = items.items.slice(indexOfFirstItem, indexOfLastItem);
 
   const itemList = currentItems.map((item, i) => {
-    return <ItemCard key={i} item={item} />;
+    return <ItemCard currentItems={currentItems} key={i} item={item} />;
   });
 
+  console.log(indexOfFirstItem, indexOfLastItem, currentItems);
   if (itemStatus === "idle" || itemStatus === "loading") {
     return (
       <div className="spinnerDiv">
@@ -60,6 +61,8 @@ const ItemPage = () => {
             totalItemsCount={items.items.length}
             pageRangeDisplayed={5}
             onChange={handlePageChange}
+            className="pagination"
+            hideNavigation={true}
           />
         </div>
       </Container>
