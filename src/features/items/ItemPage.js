@@ -6,12 +6,19 @@ import { Container, Row, Spinner } from "react-bootstrap";
 import Header from "../../components/Header";
 import ItemCard from "./ItemCard";
 import { selectAllItems, fetchItems } from "./itemsSlice";
-import React from "react";
+import React, { useState } from "react";
+import Pagination from "react-js-pagination";
 
 const ItemPage = () => {
   const dispatch = useDispatch();
   const items = useSelector(selectAllItems);
   const itemStatus = useSelector((state) => state.items.status);
+  const itemsPerPage = 9;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  function handlePageChange(pageNumber) {
+    setCurrentPage(pageNumber);
+  }
 
   useEffect(() => {
     if (itemStatus === "idle") {
@@ -19,8 +26,12 @@ const ItemPage = () => {
     }
   }, [itemStatus, dispatch]);
 
-  const itemList = items.items.map((item, i) => {
-    return <ItemCard id={i} item={item}></ItemCard>;
+  let indexOfLastItem = currentPage * itemsPerPage;
+  let indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  let currentItems = items.items.slice(indexOfFirstItem, indexOfLastItem);
+
+  const itemList = currentItems.map((item, i) => {
+    return <ItemCard key={i} item={item} />;
   });
 
   if (itemStatus === "idle" || itemStatus === "loading") {
@@ -43,6 +54,13 @@ const ItemPage = () => {
           <Container className="py-5" fluid>
             <Row className="d-flex justify-content-center">{itemList}</Row>
           </Container>
+          <Pagination
+            activePage={currentPage}
+            itemsCountPerPage={itemsPerPage}
+            totalItemsCount={items.items.length}
+            pageRangeDisplayed={5}
+            onChange={handlePageChange}
+          />
         </div>
       </Container>
     );

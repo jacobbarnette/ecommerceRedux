@@ -10,7 +10,7 @@ const initialState = {
 
 //fetch items from fakeStoreAPI
 export const fetchItems = createAsyncThunk("items/fetchItems", async () => {
-  const response = await axios.get("https://fakestoreapi.com/products?limit=9");
+  const response = await axios.get("https://fakestoreapi.com/products");
 
   return response.data;
 });

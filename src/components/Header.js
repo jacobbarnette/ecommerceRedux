@@ -13,14 +13,14 @@ const Header = () => {
   let totalCartItems = 0;
   const itemsInCart = () => {
     if (cart === undefined) {
-      return 0;
+      return null;
     } else {
       let i = 0;
       cart.map((item, i) => {
         totalCartItems += cart[i].quanity;
         return totalCartItems;
       });
-      return totalCartItems;
+      return Number(totalCartItems);
     }
   };
 

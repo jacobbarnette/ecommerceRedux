@@ -25,6 +25,7 @@ export const cartSlice = createSlice({
       state.cart = state.cart.filter((item) => item.id !== id);
       toast.error("Item removed from cart");
     },
+    emptyAllItemsFromCart: (state, action) => {},
     increaseQuanityOfItem: (state, action) => {
       const { id } = action.payload;
       const selectedItem = state.cart.find((item) => item.id === id);

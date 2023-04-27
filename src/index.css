@@ -245,11 +245,7 @@ min-height: none;
 div.fade .cartModal .modal .show{
   background-color: black;
 }
-.backdropClass.modal-backdrop.show {
 
-}
-.backdropClass{
-}
 .cartRow {
   gap: 1.5em;
   width: 80%;
@@ -301,7 +297,6 @@ div.fade .cartModal .modal .show{
   background-color: #F47D7B;
 }
 
-
 .total {
   font-weight: bold;
 }
@@ -323,10 +318,42 @@ div.fade .cartModal .modal .show{
   overflow-y: auto;
   height: 100vh;
   overflow: hidden;
-  
 }
 
+.btn-check:checked+.btn, .btn.active, .btn.show, .addBtn, .btn:first-child:active, :not(.btn-check)+.btn:active{  
+  background-color: #85FFE9;
+  color: black;
+}
 
+.btn-check:checked+.btn, .btn.active, .btn.show, .closeBtn,  :not(.btn-check)+.btn:active{  
+  background-color:#F47D7B;
+  color: black;
+}
+
+.addBtn:hover{
+  background-color: #85FFE9;
+  color: black;
+}
+
+.closeBtn:hover {
+  background-color: #F47D7B;
+  color: black
+}
+
+.fade{}
+
+.backdropClass{
+  animation: left 2.5s ease-in;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
 @media (max-width: 1024px) {
   .spinnerDiv {
@@ -358,7 +385,7 @@ div.fade .cartModal .modal .show{
 }
 
 .background {
-  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url('./Assets/homepage-image.png') top no-repeat, url('./Assets/background-wave.png') bottom no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url('./Assets/background-wave.png') bottom no-repeat;
   background-size: auto, contain, auto;
   
   

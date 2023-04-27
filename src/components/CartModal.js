@@ -6,9 +6,7 @@ import {
   decreaseQuanityOfItem,
   increaseQuanityOfItem,
   selectAllCart,
-  removeItemFromCart,
 } from "../features/cart/cartSlice";
-import { motion } from "framer-motion";
 
 import { BsPlus, BsDash } from "react-icons/bs";
 
@@ -69,50 +67,33 @@ const CartModal = ({ showModal, handleModal }) => {
     );
   });
   return (
-    <motion.div
-      className="modal"
-      animate={{ x: [50, 150, 50], opacity: 1, scale: 1 }}
-      transition={{
-        duration: 5,
-        delay: 0.3,
-        ease: [0.5, 0.71, 1, 1.5],
-      }}
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileHover={{ scale: 1.2 }}
+    <Modal
+      top
+      className="cartModal"
+      show={showModal}
+      onHide={handleModal}
+      dialogClassName="dialogClass"
+      backdropClassName="backdropClass"
     >
-      <Modal
-        top
-        className="cartModal"
-        show={showModal}
-        onHide={handleModal}
-        dialogClassName="dialogClass"
-        backdropClassName="backdropClass"
-      >
-        <Modal.Body>
-          <h2 className="cartHeader  py-3 m- text-center">
-            Your Shopping Cart
-          </h2>
-          <div className="cartItems">{cartItems}</div>
-          <div className="total text-center">
-            <p className=" total my-5">Total: {cartTotal()} </p>
-          </div>
+      <Modal.Body>
+        <h2 className="cartHeader  py-3 m- text-center">Your Shopping Cart</h2>
+        <div className="cartItems">{cartItems}</div>
+        <div className="total text-center">
+          <p className=" total my-5">Total: {cartTotal()} </p>
+        </div>
 
-          <Col>
-            <Row className="p-5 mx-auto cartRow">
-              <Button className="cartBtn itemBtn addBtn" onClick={handleModal}>
-                Checkout
-              </Button>
-              <Button
-                className="cartBtn itemBtn closeBtn"
-                onClick={handleModal}
-              >
-                Close
-              </Button>
-            </Row>
-          </Col>
-        </Modal.Body>
-      </Modal>
-    </motion.div>
+        <Col>
+          <Row className="p-5 mx-auto cartRow">
+            <Button className="cartBtn itemBtn addBtn" onClick={handleModal}>
+              Checkout
+            </Button>
+            <Button className="cartBtn itemBtn closeBtn" onClick={handleModal}>
+              Close
+            </Button>
+          </Row>
+        </Col>
+      </Modal.Body>
+    </Modal>
   );
 };
 

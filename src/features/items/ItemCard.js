@@ -31,7 +31,7 @@ const ItemCard = ({ item }) => {
                 <hr></hr>
                 <div className="card-text-body">
                   <Card.Title className="card-description">
-                    {item.title}
+                    {item.title.substring(0, 70)}
                   </Card.Title>
                   <Card.Text className="py-2 itemPrice">
                     $ {item.price.toFixed(2)}
