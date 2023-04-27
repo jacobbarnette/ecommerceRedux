@@ -295,6 +295,14 @@ div.fade .cartModal .modal .show{
   max-height: 2em;
 }
 
+.itemCardContainer {
+  transition: transform 0.2s ease-in-out;
+}
+
+.itemCardContainer:hover {
+  transform: scale(1.05);
+}
+
 .individualCartItem {
   border: none;
   font-weight: bold;
@@ -367,7 +375,7 @@ div.fade .cartModal .modal .show{
 }
 
 .btn-check:checked+.btn, .btn.active, .btn.show, .closeBtn,  :not(.btn-check)+.btn:active{  
-  background-color:#F47D7B;
+
   color: black;
 }
 
