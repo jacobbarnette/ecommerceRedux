@@ -12,8 +12,8 @@
 }
 
 .home {
-  padding-top:3em;
-  font-size: 4em;
+  padding-top:2em;
+  font-size: 5em;
   width: 100vw;
 }
 
@@ -46,12 +46,13 @@
   cursor: pointer;
 }
 
+
 .tagLineTop {
   letter-spacing: 0.2rem;
 }
 
 .homeImg {
-  object-fit: contain;
+
   width: 100%;
   height: auto;
   max-height: 100%;

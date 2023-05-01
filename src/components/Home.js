@@ -14,7 +14,7 @@ const Home = () => {
     >
       <div className="container">
         <div className="home row">
-          <div className="col-lg-6  col-md-12 ">
+          <div className="col xl-6 col-lg-6  col-md-12 ">
             <h4 className="tagLine tagLineTop text-center text-muted">
               Voted Best Retail Site of 2022
             </h4>
@@ -28,7 +28,7 @@ const Home = () => {
               Shop Now
             </Button>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-6">
+          <div className="col-lg-6 mt-3 col-md-6 col-sm-6">
             <img className="homeImg" src={homepageImg} alt="people"></img>
           </div>
         </div>
