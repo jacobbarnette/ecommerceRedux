@@ -18,7 +18,8 @@ npm start
 ## Screenshots
 
 Home Page
-![image](https://user-images.githubusercontent.com/63681779/225692336-5dc76c8d-fced-41b3-acd6-9f1d6ec7b00b.png)
+![image](https://user-images.githubusercontent.com/63681779/235535896-e21ae2c5-98da-4d98-8c3e-c6c5ef7c1627.png)
+
 Product Page
 ![image](https://user-images.githubusercontent.com/63681779/225692455-4cc8412d-9cc1-4224-8d20-809ce521438a.png)
 Cart Page
