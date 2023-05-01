@@ -37,6 +37,10 @@
   display: none;
 }
 
+.tagLineContainer {
+gap: 12;
+}
+
 span.bg-primary {
   background-color: red;
 }
@@ -44,24 +48,22 @@ span.bg-primary {
   border: none;
   color: white;
   width: 100%;
-  text-align: center;
   display: inline-block;
   cursor: pointer;
   background-color: black;
+  
 }
 
+.shopBtn:hover{
+  transform: scale(1.1);
+
+}
 
 .tagLineTop {
   letter-spacing: 0.2rem;
 }
 
-.homeImg {
 
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  max-width: 100%;
-}
 .header {
   color: #00ffd1;
   font-weight: bold;
@@ -459,6 +461,10 @@ div.fade .cartModal .modal .show{
   font-size: 1em;
 }
 
+
+.shopBtn{
+  font-size: .5em;
+}
 
 
 }
