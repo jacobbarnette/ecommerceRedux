@@ -15,7 +15,7 @@ const Home = () => {
       <div className="container">
         <div className="home row">
           <div className="col xl-6 col-lg-6  col-md-12 ">
-            <h4 className="tagLine tagLineTop text-center text-muted">
+            <h4 className="tagLine tagLineTop mt-5 text-center text-muted">
               Voted Best Retail Site of 2022
             </h4>
             <p className="tagLine">We don't follow trends, we set them.</p>
