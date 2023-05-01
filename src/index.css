@@ -285,6 +285,9 @@ min-height: none;
 .socialIcon {
   color: black;
 }
+.homeImg {
+  max-width: 100%;
+}
 
 .cartHeader{
   font-weight: bold;
