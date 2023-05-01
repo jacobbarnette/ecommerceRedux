@@ -37,6 +37,9 @@
   display: none;
 }
 
+span.bg-primary {
+  background-color: red;
+}
 .shopBtn {
   border: none;
   color: white;
@@ -44,6 +47,7 @@
   text-align: center;
   display: inline-block;
   cursor: pointer;
+  background-color: black;
 }
 
 

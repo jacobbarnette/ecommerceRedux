@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Badge } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import homepageImg from "../Assets/homepage-image.png";
 import { motion } from "framer-motion";
@@ -19,16 +19,16 @@ const Home = () => {
               Voted Best Retail Site of 2022
             </h4>
             <p className="tagLine">We don't follow trends, we set them.</p>
-            <Button
+            <Badge
               onClick={() => navigate("/items")}
               onTouchStart={() => navigate("/items")}
-              className="shopBtn"
-              variant="dark"
+              className="rounded-pill shopBtn"
+              bg="dark"
             >
               Shop Now
-            </Button>
+            </Badge>
           </div>
-          <div className="col-lg-6 mt-3 col-md-6 col-sm-6">
+          <div className="col-lg-6 mt-5 col-md-6 col-sm-6">
             <img className="homeImg" src={homepageImg} alt="people"></img>
           </div>
         </div>
